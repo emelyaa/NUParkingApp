@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="915.0" maxWidth="1337.0" minHeight="915.0" minWidth="1337.0" prefHeight="915.0" prefWidth="1337.0" spacing="10.0" xmlns="http://javafx.com/javafx/23.0.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <AnchorPane maxHeight="915.0" maxWidth="1337.0" minHeight="915.0" minWidth="1337.0" prefHeight="915.0" prefWidth="1337.0" stylesheets="@application.css">
+      <children>
+         <ImageView fitHeight="915.0" fitWidth="1337.0" layoutX="-21.0" layoutY="-21.0">
+            <image>
+               <Image url="@../../resources/map.jpg" />
+            </image>
+         </ImageView>
+         <Label layoutX="19.0" layoutY="15.0" prefHeight="43.0" prefWidth="585.0" text="Northeastern University Valet Parking Assistant" wrapText="true">
+            <font>
+               <Font name="System Bold" size="24.0" />
+            </font>
+         </Label>
+         <Label layoutX="201.0" layoutY="405.0" prefHeight="18.0" prefWidth="191.0" text="Ryder Parking Lot (Staff)">
+            <font>
+               <Font name="System Bold" size="14.0" />
+            </font>
+         </Label>
+         <Label layoutX="659.0" layoutY="97.0" prefHeight="18.0" prefWidth="191.0" text="Fenway Parking Lot (Guests)">
+            <font>
+               <Font name="System Bold" size="14.0" />
+            </font>
+         </Label>
+         <Label layoutX="841.0" layoutY="333.0" prefHeight="18.0" prefWidth="191.0" text="North Parking Lot (Students)">
+            <font>
+               <Font name="System Bold" size="14.0" />
+            </font>
+         </Label>
+         <Label layoutX="442.0" layoutY="644.0" prefHeight="18.0" prefWidth="191.0" text="Columbus Garage (Open)">
+            <font>
+               <Font name="System Bold" size="14.0" />
+            </font>
+         </Label>
+         <ListView fx:id="fenwayLotListView" layoutX="659.0" layoutY="119.0" prefHeight="95.0" prefWidth="399.0" />
+         <ListView fx:id="northLotListView" layoutX="841.0" layoutY="360.0" prefHeight="144.0" prefWidth="438.0" />
+         <ListView fx:id="columbusGarageListView" layoutX="442.0" layoutY="668.0" prefHeight="190.0" prefWidth="413.0" />
+         <ListView fx:id="ryderLotListView" layoutX="201.0" layoutY="428.0" prefHeight="144.0" prefWidth="399.0" />
+         <VBox layoutX="19.0" layoutY="60.0" prefHeight="199.0" prefWidth="236.0" spacing="15.0">
+            <children>
+                    <ComboBox fx:id="parkingLotComboBox" promptText="Select Parking Lot" />
+                    <ComboBox fx:id="vehicleTypeComboBox" promptText="Select Vehicle Type" />
+                    <ComboBox fx:id="powerTypeComboBox" promptText="Select Power Type" />
+                    <TextField fx:id="plateNumberInput" maxWidth="200.0" prefWidth="200.0" promptText="Enter Plate Number" />
+                    <TextField fx:id="stateInput" maxWidth="200.0" prefWidth="200.0" promptText="Enter State" />
+               <HBox prefHeight="54.0" prefWidth="263.0" spacing="20.0">
+                  <children>
+                           <Button fx:id="submitButton" text="Park" />
+                           <Button fx:id="unParkButton" text="Unpark" />
+                           <Button fx:id="clearButton" text="Clear" />
+                  </children>
+               </HBox>
+            </children>
+         </VBox>
+         <Label fx:id="messageLabel" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="270.0" layoutY="60.0" prefHeight="190.0" prefWidth="320.0" wrapText="true" />
+         <Label fx:id="errorLabel" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="270.0" layoutY="60.0" prefHeight="190.0" prefWidth="320.0" textFill="RED" wrapText="true" />
+      </children>
+   </AnchorPane>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+	
+</VBox>

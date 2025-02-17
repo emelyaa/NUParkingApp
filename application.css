@@ -1,0 +1,8 @@
+.available-spot {
+    -fx-text-fill: green;
+}
+
+.occupied-spot {
+    -fx-text-fill: red;
+}
+
